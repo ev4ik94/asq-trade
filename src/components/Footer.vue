@@ -51,9 +51,9 @@
 
         <div class="flex items-center">
           <div class="mr-[16px]"><img src="/icons/footer-map.svg" alt=""></div>
-          <div>
+          <div class="w-[85%]">
             <p class="text-custom-orange text-[12px]">LOGISCO HEADQUERTER</p>
-            <p class="text-white font-semibold">116th Ave, WA 98058-5055,USA</p>
+            <p class="text-white font-semibold">г. Ташкент, Яккасарайский район, ул. Богибустон дом 129</p>
           </div>
         </div>
       </div>

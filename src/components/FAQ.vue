@@ -1,19 +1,16 @@
 <template>
   <div class="bg-[#F2F8FA] 2xl:py-[150px] xl:py-[150px] lg:py-[150px] py-[60px] relative overflow-hidden">
-    <img src="/images/arrow-pattern2.svg" alt="" class="hidden 2xl:block xl:block lg:block absolute bottom-[120px] left-0 w-[80px]">
+    <img src="/images/arrow-pattern2.svg" alt="" class="hidden 2xl:block xl:block lg:block absolute bottom-[160px] left-0 w-[80px]">
     <img src="/images/faq-pattern.svg" alt="" class="hidden 2xl:block xl:block lg:block absolute bottom-0 right-0 w-[350px]">
     <div class="container 2xl:grid xl:grid lg:grid grid-cols-2">
       <div class="2xl:grid xl:grid lg:grid grid-cols-3">
-        <div class="col-span-2">
+        <div class="col-span-2 relative z-[2]">
           <div class="bg-custom-orange rounded-[100px] py-[8px] w-[253px] mb-[17px]">
-            <p class="text-center text-white text-[14px]">FREQUENTLY ASKED QUESTIONS</p>
+            <p class="text-center text-white text-[14px]">{{$t('faq.span')}}</p>
           </div>
-          <h1 class="text-color-selection 2xl:text-[56px] xl:text-[56px] lg:text-[56px] text-[40px] font-semibold leading-tight mb-[25px]">Do you have
-            any question?
-            Find answer
-            here</h1>
-          <p class="text-color-custom-gray 2xl:text-[20px] xl:text-[20px] lg:text-[20px] text-[18px]">Some frequently asked questions about
-            logisco’s cargo services</p>
+          <h1 class="text-color-selection 2xl:text-[56px] xl:text-[56px] lg:text-[56px] text-[40px] font-semibold leading-tight mb-[25px]">
+            {{$t('faq.title')}}</h1>
+          <p class="text-color-custom-gray 2xl:text-[20px] xl:text-[20px] lg:text-[20px] text-[18px]">{{$t('faq.text')}}</p>
         </div>
       </div>
 
@@ -45,7 +42,7 @@
               'lg:text-[18px]': true,
               'text-[14px]': true,
               'font-semibold': true,
-            }">{{title}}</p>
+            }">{{$t(title)}}</p>
             <div v-if="currentKey===id" class="w-[25px] h-[25px] rounded-[50%] bg-[#FFFF]/[0.2] flex items-center justify-center " >
               <p class="text-white font-semibold 2xl:text-[20px] xl:text-[20px] lg:text-[20px]">-</p>
             </div>
@@ -57,7 +54,7 @@
             height: id===currentKey?heightElem+'px':'0px'
           }">
             <div class="item-content p-[30px]">
-              <p class="text-color-custom-gray">{{description}}</p>
+              <p class="text-color-custom-gray">{{$t(description)}}</p>
             </div>
           </div>
         </div>
@@ -73,27 +70,23 @@ export default {
       faqList: [
         {
           id: 1,
-          title: 'What is the LBS weight cost of goods transportation?',
-          description: 'Mauris ut enim sit amet lacus ornare ullamcorper. Praesent placerat neque eu\n' +
-              'purus rhoncus, vel tincidunt odio ultrices. Sed theya arrum.'
+          title: 'faq.question1Title',
+          description: 'faq.question1Text'
         },
         {
           id: 2,
-          title: 'How much time it takes for LTL Freight transport?',
-          description: 'Mauris ut enim sit amet lacus ornare ullamcorper. Praesent placerat neque eu\n' +
-              'purus rhoncus, vel tincidunt odio ultrices. Sed theya arrum.'
+          title: 'faq.question2Title',
+          description: 'faq.question2Text'
         },
         {
           id: 3,
-          title: 'What are the pick up points of logistics?',
-          description: 'Mauris ut enim sit amet lacus ornare ullamcorper. Praesent placerat neque eu\n' +
-              'purus rhoncus, vel tincidunt odio ultrices. Sed theya arrum.'
+          title: 'faq.question3Title',
+          description: 'faq.question3Text'
         },
         {
           id: 4,
-          title: 'What is the cost of goods transportation?',
-          description: 'Mauris ut enim sit amet lacus ornare ullamcorper. Praesent placerat neque eu\n' +
-              'purus rhoncus, vel tincidunt odio ultrices. Sed theya arrum.'
+          title: 'faq.question4Title',
+          description: 'faq.question4Text'
         }
       ],
       currentKey: 0,

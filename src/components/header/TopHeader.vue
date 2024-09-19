@@ -18,7 +18,7 @@ import Languages from "@/components/header/Languages.vue";
       </div>
       <a href="mailto:info@asqtrade.uz" class="flex items-center px-[30px]">
         <span class="text-custom-orange mr-[7px]"><Location /></span>
-        <p class="text-white text-[13px]">17Street 16th Ave SE Unit Arenton, WA 98058-5055</p>
+        <p class="text-white text-[13px]">г. Ташкент, Яккасарайский район, ул. Богибустон дом 129</p>
       </a>
     </div>
 

@@ -13,12 +13,12 @@
     <div class="container grid grid-cols-5 relative z-[1]">
       <div class="col-span-2 pt-[100px] pl-[120px] bg-main-color">
         <div class="bg-[#FFFFFF]/[0.4] w-[146px] px-[10px] py-[6px] rounded-[100px] text-white text-[14px] mb-[15px]">
-          <p>WHY CHOOSE US</p>
+          <p>{{$t('why.span')}}</p>
         </div>
-        <h1 class="text-[40px] text-white font-semibold font-outfit ">Why Choose Us</h1>
+        <h1 class="text-[40px] text-white font-semibold font-outfit ">{{$t('why.title')}}</h1>
 
         <div class="mt-[20px]">
-          <div v-for="{id, title} in items" key="{{id}}" @click="selectItem(id)" :class="{
+          <div v-for="{id, title, description} in items" key="{{id}}" @click="selectItem(id)" :class="{
             'flex': true,
             'items-center': true,
             'py-[16px]': true,
@@ -38,20 +38,31 @@
                 <path d="M0.949951 7.8499L4.19995 4.5999L0.949951 1.3499L1.59995 0.049902L6.14995 4.5999L1.59995 9.1499L0.949951 7.8499Z" fill="white"/>
               </svg>
             </div>
-            <p class="ml-[10px] text-white font-outfit font-semibold">{{title}}</p>
+            <p class="ml-[10px] text-white font-outfit font-semibold">{{$t(title)}}</p>
           </div>
         </div>
       </div>
 
       <div class="col-span-3 pt-[228px]">
-        <div v-if="current===1" class="bg-custom-orange px-[65px] py-[55px] ml-[-40px] h-[470px] block-choose relative">
-          <ExpertEmployees />
+        <div v-if="current===1" class="bg-custom-orange px-[65px] py-[55px] ml-[-20px] h-[470px] block-choose relative">
+          <div>
+            <p class="text-white">{{$t('why.listText1')}}</p>
+          </div>
         </div>
-        <div v-else-if="current===2" class="bg-custom-orange px-[65px] py-[55px] ml-[-40px] h-[470px] block-choose relative">
-          <ExpertEmployees />
+        <div v-else-if="current===2" class="bg-custom-orange px-[65px] py-[55px] ml-[-20px] h-[470px] block-choose relative">
+          <div>
+            <p class="text-white">{{$t('why.listText2')}}</p>
+          </div>
         </div>
-        <div v-else-if="current===3" class="bg-custom-orange px-[65px] py-[55px] ml-[-40px] h-[470px] block-choose relative">
-          <ExpertEmployees />
+        <div v-else-if="current===3" class="bg-custom-orange px-[65px] py-[55px] ml-[-20px] h-[470px] block-choose relative">
+          <div>
+            <p class="text-white">{{$t('why.listText3')}}</p>
+          </div>
+        </div>
+        <div v-else-if="current===4" class="bg-custom-orange px-[65px] py-[55px] ml-[-20px] h-[470px] block-choose relative">
+          <div>
+            <p class="text-white">{{$t('why.listText4')}}</p>
+          </div>
         </div>
       </div>
     </div>
@@ -85,15 +96,23 @@ export default {
       items: [
         {
           id: 1,
-          title: 'Expert  Employees'
+          title: 'why.listTitle1',
+          description: 'why.listText1',
         },
         {
           id: 2,
-          title: 'Modern Technology'
+          title: 'why.listTitle2',
+          description: 'why.listText2',
         },
         {
           id: 3,
-          title: 'Global Operation'
+          title: 'why.listTitle3',
+          description: 'why.listText3',
+        },
+        {
+          id: 4,
+          title: 'why.listTitle4',
+          description: 'why.listText4',
         }
       ],
       current: 1

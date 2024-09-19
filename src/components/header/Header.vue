@@ -28,8 +28,9 @@
               <Phone />
             </div>
           </div>
+
           <a href="tel:+998901301339" class="block">
-            <p class="text-[16px] text-white">Позвонить нам</p>
+            <p class="text-[16px] text-white">{{ $t('callUs') }}</p>
             <p class="text-[18px] text-white font-bold">+998 90 130 13 39</p>
           </a>
         </div>
