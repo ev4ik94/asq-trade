@@ -1,30 +1,30 @@
 <template>
   <div class="bg-[#F2F8FA] relative">
     <img src="/images/service-patern-icon.svg" alt="" class="absolute top-0 left-0 w-[500px]">
-    <img src="/images/arrow-patern.svg" alt="" class="absolute top-[550px] left-0 w-[100px]">
-    <img src="/images/arrow-patern.svg" alt="" class="absolute top-[10px] right-0 w-[100px] rotate-[180deg]">
+    <img src="/images/arrow-patern.svg" alt="" class="absolute top-[550px] left-0 w-[100px] hidden 2xl:block xl:block lg:block">
+    <img src="/images/arrow-patern.svg" alt="" class="absolute top-[10px] right-0 w-[100px] rotate-[180deg] hidden 2xl:block xl:block lg:block">
 
 <!--    <p>{{ $t('welcome') }}</p>-->
-    <div class="py-[60px] container relative">
+    <div class="2xl:py-[60px] xl:py-[60px] lg:py-[60px] py-[40px] container relative">
       <img src="/images/pattern-dots.svg" alt="" class="absolute right-[0px] z-[1] bottom-[10px]">
       <div class="flex flex-col justify-center items-center ">
         <div class="bg-custom-orange py-[6px] px-[10px] rounded-[100px] mb-[12px]">
           <p class="text-white text-[14px]">Our Service</p>
         </div>
-        <h1 class="text-[40px] mb-[9px] text-color-selection font-semibold font-outfit">Wide Variety of Logistics Services</h1>
+        <h1 class="2xl:text-[40px] xl:text-[40px] lg:text-[40px] text-[35px] mb-[9px] text-color-selection font-semibold font-outfit">Wide Variety of Logistics Services</h1>
         <p class="text-color-custom-gray">Logisco Air freight service deliver the knowledge & opportunity
           to optimize every mile on every lane. Get full-service</p>
       </div>
 
-      <div class="grid grid-cols-3 gap-4 mt-[40px] relative z-[1]">
+      <div class="2xl:grid xl:grid lg:grid grid-cols-3 gap-4 mt-[40px] relative z-[1]">
         <div v-for="{id, title, description, icon, image} in services" :key="id"
-             class="rounded-[10px] bg-white overflow-hidden shadow-lg shadow-[#8997BA]/[0.3]">
-          <div class="h-[282px]">
+             class="rounded-[10px] bg-white overflow-hidden shadow-lg shadow-[#8997BA]/[0.3] mb-[15px] 2xl:mb-0 xl:mb-0 lg:mb-0">
+          <div class="2xl:h-[282px] xl:h-[282px] lg:h-[282px] h-[262px]">
             <img :src="image" alt="{{title}}" class="w-full h-full object-cover">
 
           </div>
 
-          <div class="py-[52px] px-[40px] relative">
+          <div class="2xl:py-[52px] xl:py-[52px] lg:py-[52px] py-[45px] px-[40px] relative">
             <div class="w-[88px] h-[88px] absolute rounded-[50%] bg-white border-4
           border-[#FFEAE6] flex justify-center items-center top-[-20%] left-[50px]">
               <img :src="icon" alt="">

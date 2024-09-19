@@ -1,7 +1,24 @@
 <template>
-  <div class="bg-main-color flex relative z-10">
+  <div class="bg-main-color flex relative z-10 justify-between 2xl:justify-start xl:justify-start lg:justify-start">
     <Logo />
-    <div class="w-full">
+    <button @click="showDrawer" class="text-white bg-custom-orange block 2xl:hidden xl:hidden lg:hidden
+    w-[74px] h-[74px] flex items-center justify-center">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 12H21M3 6H21M3 18H21" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    <a-drawer
+        v-model:open="showMenu"
+        class="custom-class"
+        root-class-name="root-class-name"
+        :root-style="{ color: 'blue' }"
+        style="color: red"
+        placement="right"
+    >
+      <MobileMenu />
+    </a-drawer>
+    <div class="w-full hidden 2xl:block xl:block lg:block ">
       <TopHeader />
       <div class="w-full  flex justify-end items-center">
         <Categoeis />
@@ -22,13 +39,40 @@
 </template>
 
 <style>
+.ant-drawer-wrapper-body{
+  background-color: #104B59;
+}
 
+.anticon{
+  color: #fff;
+}
 </style>
 
-<script setup lang="ts">
 
+<script setup lang="ts">
 import TopHeader from "@/components/header/TopHeader.vue";
 import Logo from "@/components/header/Logo.vue";
 import Categoeis from "@/components/header/Categoeis.vue";
 import Phone from "@/components/icons/Phone.vue";
+import MobileMenu from "@/components/header/MobileMenu.vue";
+</script>
+
+<script  lang="ts">
+
+export default {
+  data(){
+    return {
+      showMenu: false
+    }
+  },
+   methods: {
+     showDrawer(){
+        this.showMenu = !this.showMenu
+     },
+
+     afterOpenChange(){
+
+     }
+   }
+}
 </script>

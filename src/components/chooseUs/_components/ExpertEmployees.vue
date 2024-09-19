@@ -33,7 +33,7 @@
 
     </div>
 
-    <div class="ml-[50px]">
+    <div class="ml-[50px] 2xl:block xl:block lg:block md:block hidden">
       <div class="w-[200px] h-[150px] overflow-hidden rounded-[10px] border-[5px] border-white/[0.4]">
         <img src="/images/shep-front.jpg" alt="" class="w-full h-full object-cover">
       </div>

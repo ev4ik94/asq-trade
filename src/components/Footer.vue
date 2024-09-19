@@ -1,7 +1,7 @@
 <template>
   <div class="py-[57px] bg-[#033C49]">
     <div class="container">
-      <div class=" grid grid-cols-2">
+      <div class=" 2xl:grid xl:grid lg:grid grid-cols-2">
         <div>
           <div class="bg-custom-orange p-[33px] rounded-[10px]">
             <p class="text-white font-bold text-[18px]">Get best rate for your
@@ -11,7 +11,7 @@
           </div>
         </div>
 
-        <div class="flex flex-col pl-[100px]">
+        <div class="flex flex-col 2xl:pl-[100px] xl:pl-[100px] lg:pl-[100px] mt-[15px] 2xl:mt-0 xl:mt-0 lg:mt-0">
           <p class="mb-[20px] text-white text-[20px] font-semibold">Industry Served</p>
           <div class="flex items-center" v-for="{path, title, active}  in categories" :key="path" @click="selectLink(path)">
             <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,9 +30,10 @@
 
         </div>
       </div>
-      <div class="py-[24px] px-[60px] rounded-[10px] bg-white/[0.1] grid grid-cols-3 mt-[68px]
+      <div class="py-[24px] 2xl:px-[60px] xl:px-[60px] lg:px-[60px] px-[24px] rounded-[10px] bg-white/[0.1]
+      2xl:grid xl:grid lg:grid grid-cols-3 mt-[35px] 2xl:mt-[68px] xl:mt-[68px] lg:mt-[68px]
       w-full border-[3px] border-b-custom-orange border-t-0 border-l-0 border-r-0">
-        <div class="flex items-center">
+        <div class="flex items-center mb-[12px] 2xl:mb-0 xl:mb-0 lg:mb-0">
           <div class="mr-[16px]"><img src="/icons/footer-email.svg" alt=""></div>
           <div>
             <p class="text-custom-orange text-[12px]">E-MAIL US</p>
@@ -40,7 +41,7 @@
           </div>
         </div>
 
-        <div class="flex items-center">
+        <div class="flex items-center mb-[12px] 2xl:mb-0 xl:mb-0 lg:mb-0">
           <div class="mr-[16px]"><img src="/icons/footer-phone.svg" alt=""></div>
           <div>
             <p class="text-custom-orange text-[12px]">SUPPORT 27/7</p>
@@ -57,12 +58,12 @@
         </div>
       </div>
 
-      <div class="flex items-center justify-between mt-[40px]">
-        <p class="text-white text-[15px]">© {{date}} <span class="text-custom-orange">ASQ-TRADE</span> transportation & logistics / All rights reserved</p>
-        <div class="flex">
-          <a href="/" class="hover:text-custom-orange transition text-white text-[15px]">Privacy </a>
+      <div class="2xl:flex xl:flex lg:flex items-center justify-between mt-[40px]">
+        <p class="text-white 2xl:text-[15px] xl:text-[15px] lg:text-[15px] text-[13px]">© {{date}} <span class="text-custom-orange">ASQ-TRADE</span> transportation & logistics / All rights reserved</p>
+        <div class="flex mt-[12px] 2xl:mt-0 xl:mt-0 lg:mt-0">
+          <a href="/" class="hover:text-custom-orange transition text-white 2xl:text-[15px] xl:text-[15px] lg:text-[15px] text-[13px]">Privacy </a>
           <span class="text-white">&nbsp;/&nbsp;</span>
-          <a href="/" class="hover:text-custom-orange transition text-white text-[15px]">Terms & Conditions</a>
+          <a href="/" class="hover:text-custom-orange transition text-white 2xl:text-[15px] xl:text-[15px] lg:text-[15px] text-[13px]">Terms & Conditions</a>
         </div>
       </div>
     </div>
