@@ -18,13 +18,13 @@ const app = createApp(App)
 app.use(router)
 app.use(Antd)
 app.use(i18n);
-router.beforeEach((to, from, next) => {
-    const lang:any = to.params.lang || 'ru'; // Язык по умолчанию
-    if (!['en', 'ru', 'uz'].includes(lang)) {
-        return next('ru');
-    }
-
-    i18n.global.locale = lang;
-    next();
-});
+// router.beforeEach((to, from, next) => {
+//     const lang:any = to.params.lang || 'ru'; // Язык по умолчанию
+//     if (!['en', 'ru', 'uz'].includes(lang)) {
+//         return next('ru');
+//     }
+//
+//     i18n.global.locale = lang;
+//     next();
+// });
 app.mount('#app')
