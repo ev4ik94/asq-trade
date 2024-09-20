@@ -44,24 +44,24 @@
       </div>
 
       <div class="col-span-3 pt-[228px]">
-        <div v-if="current===1" class="bg-custom-orange px-[65px] py-[55px] ml-[-20px] h-[470px] block-choose relative">
+        <div v-if="current===1" class="bg-custom-orange px-[35px] py-[25px] ml-[-20px] h-[470px] block-choose relative text-[15px]">
           <div>
-            <p class="text-white">{{$t('why.listText1')}}</p>
+            <p class="text-white space-preline">{{$t('why.listText1')}}</p>
           </div>
         </div>
-        <div v-else-if="current===2" class="bg-custom-orange px-[65px] py-[55px] ml-[-20px] h-[470px] block-choose relative">
+        <div v-else-if="current===2" class="bg-custom-orange px-[35px] py-[25px] ml-[-20px] h-[470px] block-choose relative text-[15px]">
           <div>
-            <p class="text-white">{{$t('why.listText2')}}</p>
+            <p class="text-white space-preline">{{$t('why.listText2')}}</p>
           </div>
         </div>
-        <div v-else-if="current===3" class="bg-custom-orange px-[65px] py-[55px] ml-[-20px] h-[470px] block-choose relative">
+        <div v-else-if="current===3" class="bg-custom-orange px-[35px] py-[25px] ml-[-20px] h-[470px] block-choose relative text-[15px]">
           <div>
-            <p class="text-white">{{$t('why.listText3')}}</p>
+            <p class="text-white space-preline">{{$t('why.listText3')}}</p>
           </div>
         </div>
-        <div v-else-if="current===4" class="bg-custom-orange px-[65px] py-[55px] ml-[-20px] h-[470px] block-choose relative">
+        <div v-else-if="current===4" class="bg-custom-orange px-[35px] py-[25px] ml-[-20px] h-[470px] block-choose relative text-[15px]">
           <div>
-            <p class="text-white">{{$t('why.listText4')}}</p>
+            <p class="text-white space-preline">{{$t('why.listText4')}}</p>
           </div>
         </div>
       </div>

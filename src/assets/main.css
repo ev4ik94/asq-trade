@@ -27,4 +27,12 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.text-red-500{
+    color: #a20404;
+}
+
+.space-preline{
+    white-space: pre-line;
+}
+
 

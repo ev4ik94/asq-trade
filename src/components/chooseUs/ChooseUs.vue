@@ -1,5 +1,5 @@
 <template>
-  <div class="hidden 2xl:block xl:block lg:block">
+  <div class="hidden 2xl:block xl:block lg:block observe-elem" id="advantages">
     <ChooseUsDesctop />
   </div>
   <div class="block 2xl:hidden xl:hidden lg:hidden">

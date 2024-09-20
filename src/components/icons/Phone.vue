@@ -7,3 +7,9 @@
   </svg>
 
 </template>
+
+<script>
+export default {
+  name: 'Phone'
+}
+</script>

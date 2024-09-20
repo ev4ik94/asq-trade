@@ -35,6 +35,7 @@
 <script lang="ts">
 
 export default {
+  name: 'Languages',
   computed: {
     currentLanguage() {
       return this.$route.params.lang || 'ru';

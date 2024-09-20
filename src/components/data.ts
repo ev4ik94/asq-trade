@@ -1,7 +1,10 @@
 
 
 export const categories:any[] = [
-    {path: '/#service', title: 'test', active: true},
-    {path: '/#service2', title: 'test2', active: false},
-    {path: '/#service3', title: 'test3', active: false}
+    {path: '#aboutUs', title: 'about', active: false},
+    {path: '#advantages', title: 'why', active: false},
+    {path: '#services', title: 'services', active: false},
+    {path: '#ourWork', title: 'ourWork', active: false},
+    {path: '#faq', title: 'faq', active: false},
+    {path: '#contactUs', title: 'contactUs', active: false},
 ]

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#F2F8FA] relative">
+  <div class="bg-[#F2F8FA] relative observe-elem" id="services">
     <img src="/images/service-patern-icon.svg" alt="" class="absolute top-0 left-0 w-[500px]">
     <img src="/images/arrow-patern.svg" alt="" class="absolute top-[550px] left-0 w-[100px] hidden 2xl:block xl:block lg:block">
     <img src="/images/arrow-patern.svg" alt="" class="absolute top-[10px] right-0 w-[100px] rotate-[180deg] hidden 2xl:block xl:block lg:block">
@@ -33,8 +33,8 @@
             <p class="mt-[12px] mb-[15px] text-color-custom-gray">{{$t(description)}}</p>
 
           </div>
-          <button class="text-[14px] mb-[20px] ml-[40px] mr-[40px] font-semibold text-custom-orange px-[30px] h-[46px]
-          rounded-[10px] bg-custom-orange/[0.2] hover:bg-custom-orange hover:text-white transition">{{$t('service.button')}}</button>
+          <router-link @click="selectLink" :to="{ name: 'Home', hash: '#contactUs', params:{lang:$route.params.lang||'ru'} }" class="text-[14px] mb-[20px] flex justify-center items-center ml-[40px] mr-[40px] font-semibold text-custom-orange px-[30px] h-[46px]
+          rounded-[10px] bg-custom-orange/[0.2] hover:bg-custom-orange hover:text-white transition">{{$t('service.button')}}</router-link>
         </div>
       </div>
     </div>
@@ -70,6 +70,19 @@ export default {
         }]
     }
   },
+
+  methods: {
+    selectLink(){
+      const elem = document.getElementById('contactUs')
+      if(elem){
+        const elementPosition = elem.getBoundingClientRect().top + window.pageYOffset;
+        window.scroll({
+          behavior: 'smooth',
+          top: elementPosition,
+        });
+      }
+    }
+  }
 
 }
 </script>

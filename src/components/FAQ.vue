@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#F2F8FA] 2xl:py-[150px] xl:py-[150px] lg:py-[150px] py-[60px] relative overflow-hidden">
+  <div class="bg-[#F2F8FA] 2xl:py-[150px] xl:py-[150px] lg:py-[150px] py-[60px] observe-elem relative overflow-hidden" id="faq">
     <img src="/images/arrow-pattern2.svg" alt="" class="hidden 2xl:block xl:block lg:block absolute bottom-[160px] left-0 w-[80px]">
     <img src="/images/faq-pattern.svg" alt="" class="hidden 2xl:block xl:block lg:block absolute bottom-0 right-0 w-[350px]">
     <div class="container 2xl:grid xl:grid lg:grid grid-cols-2">

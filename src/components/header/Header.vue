@@ -35,8 +35,18 @@
           </a>
         </div>
       </div>
+
+
+
+
+
+    </div>
+    <div v-if="scrollY>150">
+      <HeaderScroll />
     </div>
   </div>
+
+
 </template>
 
 <style>
@@ -50,30 +60,67 @@
 </style>
 
 
-<script setup lang="ts">
-import TopHeader from "@/components/header/TopHeader.vue";
-import Logo from "@/components/header/Logo.vue";
-import Categoeis from "@/components/header/Categoeis.vue";
-import Phone from "@/components/icons/Phone.vue";
-import MobileMenu from "@/components/header/MobileMenu.vue";
-</script>
+
 
 <script  lang="ts">
 
+import Logo from "@/components/header/Logo.vue";
+import MobileMenu from "@/components/header/MobileMenu.vue";
+import HeaderScroll from "@/components/header/HeaderScroll.vue";
+import Phone from "@/components/icons/Phone.vue";
+import Categoeis from "@/components/header/Categoeis.vue";
+import TopHeader from "@/components/header/TopHeader.vue";
+
+
+import {ref, onMounted, onUnmounted, watch} from 'vue';
+import {useRoute} from "vue-router";
+
 export default {
-  data(){
-    return {
-      showMenu: false
-    }
+  components:{
+    HeaderScroll,
+    Phone,
+    Categoeis,
+    TopHeader,
+    MobileMenu,
+    Logo
   },
-   methods: {
-     showDrawer(){
-        this.showMenu = !this.showMenu
-     },
+  setup() {
+    const scrollY = ref(0); // Для хранения текущей позиции прокрутки
+    const showMenu = ref(false)
+    const route = useRoute()
+    const currentRoute = ref(route.hash);
 
-     afterOpenChange(){
+    // Функция для обновления scrollY при скролле
+    const onScroll = () => {
+      scrollY.value = window.scrollY;
+    };
 
-     }
-   }
-}
+    // Добавляем слушатель событий при монтировании компонента
+    onMounted(() => {
+      window.addEventListener('scroll', onScroll);
+    });
+
+    watch(
+        () => route.hash, // Отслеживаем изменение полного пути
+        (newRoute, oldRoute) => {
+
+          currentRoute.value = newRoute;
+          showMenu.value = false
+        }
+    );
+
+    // Удаляем слушатель событий при размонтировании компонента
+    onUnmounted(() => {
+      window.removeEventListener('scroll', onScroll);
+    });
+
+    function  showDrawer(){
+      showMenu.value = !showMenu.value
+    }
+
+    return {
+      scrollY,showMenu, showDrawer
+    };
+  },
+};
 </script>

@@ -1,6 +1,6 @@
 <template>
   <div class="2xl:py-[60px] xl:py-[60px] lg:py-[60px] py-[40px]
-  2xl:grid xl:grid lg:grid grid-cols-2 container flex flex-col-reverse">
+  2xl:grid xl:grid lg:grid grid-cols-2 container flex flex-col-reverse observe-elem" id="aboutUs">
     <div class="h-[600px] relative hidden 2xl:block xl:block lg:block">
       <img src="/images/dots-pattern2.svg" alt="" class="absolute right-[0px] hidden 2xl:block xl:block lg:block">
       <div class="relative z-[1] w-[462px] h-[590px] rounded-[15px] border-[9px] border-white overflow-hidden shadow-lg shadow-[#B2B2B2]/[0.5]">
@@ -57,7 +57,7 @@
       </div>
       
       <div class="2xl:flex xl:flex lg:flex md:flex items-center self-start justify-start w-full 2xl:w-auto xl:w-auto lg:w-auto md:w-auto">
-        <button class="w-full hover:bg-main-color transition 2xl:w-[220px] xl:w-[220px] lg:w-[220px] md:w-[170px] bg-color-button mr-[33px] rounded-[10px] h-[50px]  text-white font-semibold flex items-center justify-center">
+        <button @click="selectLink" class="w-full hover:bg-main-color transition 2xl:w-[220px] xl:w-[220px] lg:w-[220px] md:w-[170px] bg-color-button mr-[33px] rounded-[10px] h-[50px]  text-white font-semibold flex items-center justify-center">
           {{$t('about.contact')}}
           <span class="w-[35px] h-[35px] bg-white rounded-[5px] flex items-center justify-center ml-[15px]"><img src="/icons/check.svg" alt=""></span>
         </button>
@@ -66,7 +66,7 @@
             <img src="/icons/phone.svg" alt="">
           </div>
           <div class="ml-[12px]">
-            <p class="font-outfit text-color-selection font-semibold">{{$t('about.questions')}}</p>
+            <p  class="font-outfit text-color-selection font-semibold">{{$t('about.questions')}}</p>
             <p class="text-color-custom-gray">+998 90 130 13 39</p>
           </div>
         </a>
@@ -91,5 +91,21 @@
 }
 
 </style>
-<script setup lang="ts">
+<script  lang="ts">
+
+export default {
+  methods: {
+    selectLink(){
+      const elem = document.getElementById('contactUs')
+      console.log('clicj')
+      if(elem){
+        const elementPosition = elem.getBoundingClientRect().top + window.pageYOffset;
+        window.scroll({
+          behavior: 'smooth',
+          top: elementPosition,
+        });
+      }
+    }
+  }
+}
 </script>

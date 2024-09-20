@@ -1,16 +1,15 @@
 <template>
-  <div class="relative">
+  <div class="relative observe-elem" id="ourWork">
     <img src="/images/pattern-airplane.svg" alt="" class="hidden 2xl:block xl:block lg:block absolute bottom-[-80px] right-0 w-[350px]">
     <div class="2xl:py-[60px] xl:py-[60px] lg:py-[60px] py-[40px] container 2xl:grid xl:grid lg:grid grid-cols-3 gap-8 relative">
       <img src="/icons/line.svg" alt="" class="hidden 2xl:block xl:block lg:block absolute w-[930px] top-[400px] left-[60px]">
       <div class="col-span-2">
         <div class="2xl:w-[80%] xl:w-[80%] lg:w-[80%]">
           <div class="bg-color-custom-green rounded-[100px] py-[8px] w-[175px] mb-[16px]">
-            <p class="text-white font-medium text-[14px] text-center">OUR WORK PROCESS</p>
+            <p class="text-white font-medium text-[14px] text-center">{{$t('work.span')}}</p>
           </div>
-          <h1 class="2xl:text-[48px] xl:text-[48px] lg:text-[48px] text-[40px] font-semibold text-color-selection mb-[25px]">We always follow the best
-            ways of logistics</h1>
-          <p class="text-color-custom-gray 2xl:text-[20px] xl:text-[20px] lg:text-[20px] text-[18px]">Logisco Air freight service deliver the knowledge & opportunity to optimize every</p>
+          <h1 class="2xl:text-[48px] xl:text-[48px] lg:text-[48px] text-[40px] font-semibold text-color-selection mb-[25px]">{{$t('work.title')}}</h1>
+          <p class="text-color-custom-gray 2xl:text-[20px] xl:text-[20px] lg:text-[20px] text-[18px]">{{$t('work.description')}}</p>
         </div>
         <div class="2xl:grid xl:grid lg:grid grid-cols-2 gap-8">
           <div class="relative flex flex-col 2xl:items-center xl:items-center lg:items-center justify-center 2xl:pt-[150px] xl:pt-[150px] lg:pt-[150px] pt-[80px] item-step">
@@ -23,11 +22,8 @@
 
 
             <div class="2xl:pl-[50px] xl:pl-[50px] lg:pl-[50px]">
-              <p class="text-color-selection text-[24px] font-semibold mb-[20px]">Step 1: Receive Packages</p>
-              <p class="text-color-custom-gray">Logisco Air freight service deliver to know
-                ledge & opportunity to optimize Logisco Air
-                freight service deliver to know ledge and
-                opportunity to optimize.</p>
+              <p class="text-color-selection text-[24px] font-semibold mb-[20px]">{{$t('work.step1Title')}}</p>
+              <p class="text-color-custom-gray space-preline">{{$t('work.step1Text')}}</p>
             </div>
           </div>
           <div class="relative flex flex-col 2xl:items-center xl:items-center lg:items-center justify-center 2xl:pt-[150px] xl:pt-[150px] lg:pt-[150px] pt-[50px] item-step">
@@ -40,11 +36,8 @@
 
 
             <div class="2xl:pl-[50px] xl:pl-[50px] lg:pl-[50px]">
-              <p class="text-color-selection text-[24px] font-semibold mb-[20px]">Step 2: Receive Packages</p>
-              <p class="text-color-custom-gray">Logisco Air freight service deliver to know
-                ledge & opportunity to optimize Logisco Air
-                freight service deliver to know ledge and
-                opportunity to optimize.</p>
+              <p class="text-color-selection text-[24px] font-semibold mb-[20px]">{{$t('work.step2Title')}}</p>
+              <p class="text-color-custom-gray space-preline">{{$t('work.step2Text')}}</p>
             </div>
           </div>
         </div>
@@ -60,11 +53,8 @@
           </div>
 
           <div class="2xl:pl-[50px] xl:pl-[50px] lg:pl-[50px]">
-            <p class="text-color-selection text-[24px] font-semibold mb-[20px]">Step 3: Receive Packages</p>
-            <p class="text-color-custom-gray">Logisco Air freight service deliver to know
-              ledge & opportunity to optimize Logisco Air
-              freight service deliver to know ledge and
-              opportunity to optimize.</p>
+            <p class="text-color-selection text-[24px] font-semibold mb-[20px]">{{$t('work.step3Title')}}</p>
+            <p class="text-color-custom-gray space-preline">{{$t('work.step3Text')}}</p>
           </div>
         </div>
       </div>
